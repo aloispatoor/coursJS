@@ -1,0 +1,582 @@
+@font-face {
+    font-family: archiDaughter;
+    src: url(../fonts/ArchitectsDaughter-Regular.ttf);
+}
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    position : relative;
+    height: 100vh;
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.dark{
+    color:white;
+    background-color: black;
+}
+
+.light{
+    color:black;
+    background-color: white;
+}
+
+.red{
+    color:red;
+}
+
+/* INDEX */
+#indexHeader .button{
+    background-color: white;
+    color:black;
+    padding:5px;
+    border-radius: 30px;
+    margin-right: 5%;
+    transition: all 0.3s ease-in-out;
+}
+#indexHeader .button:hover{
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 3px 3px purple;
+}
+#indexHeader nav{
+    height: 10vh;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#indexMenu{
+    margin-top : 5%;
+}
+#indexMenu ul{
+    margin-top: 2%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+h1{
+    text-transform : uppercase;
+    text-align: center;
+}
+/* INFO GENERALES */
+#infoMain{
+    margin: 5%;
+}
+#infoMain h1{
+    margin-bottom: 5%;
+}
+
+/* AGORYTHMES */
+#algoMain{
+    margin: 5%;
+    text-align:center;
+}
+#algoMain h1{
+    margin-bottom: 5%;
+}
+
+/* FORMULAIRE */
+#formMain{
+    padding:5%;
+}
+
+/* SWITCH ET TABLEAUX */
+#switchMain{
+    margin: 5%;
+    text-align:center;
+}
+#switchBody h1{
+    margin: 2%;
+}
+/* PAGE CONNECTION */
+#connexion{
+    margin: 30vh auto;
+    border: 2px solid purple;
+    box-shadow: 5px 5px purple;
+    width: 50%;
+}
+
+#connexion h1{
+    text-align: center;
+    color:purple;
+}
+
+#connexion form{
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    padding:5%;
+}
+
+#connexion #additionalText{
+    text-align: center;
+}
+
+.labelAndInput{
+    padding-top:2%;
+}
+
+button{
+    margin:2%;
+}
+
+/* MODAL */
+#modalMain{
+    margin:5%;
+}
+#modalMain h1{
+    margin: 2%;
+}
+#allCards{
+    display: flex;
+}
+
+#allCards button{
+    border-radius: 20px;
+    padding: 1% 2%;
+    border:none;
+    background-color: purple;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#allCards button:focus{
+    box-shadow: 2px 2px black;
+}
+
+.card{
+    margin: 20px;
+    text-align: center;
+    width: 20%;
+}
+
+.modal{
+    position:absolute;
+    transform:translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    animation-name : modal;
+    animation-duration : 2s;
+}
+
+.displayNone{
+    display: none;
+}
+
+h2{
+    padding: 2%;
+}
+
+@keyframes modal{
+    from{
+        filter: blur(10px);
+        top : 0;
+    }
+    to{
+       filter: blur(0);
+    }
+}
+
+/* MENU BURGER */
+    /* BACKGROUND IMAGE */
+#headerImg{
+    background-image: url(../img/pexels-photo-1061623.jpeg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    height: 80vh;
+}
+#headerImg h1{
+    font-family:'Courier New', Courier, monospace;
+    padding-top: 20%;
+    color: white;
+    opacity: 0.5;
+}
+
+ /* NAV BAR */
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 10vh;
+    box-shadow: 1px 1px 3px black;
+}
+
+    /* NAV BAR VISIBLE SUR DESKTOP */
+.ulNavBar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20%;
+    font-family:'Courier New', Courier, monospace;
+}
+.ulNavBar li {
+    padding-left : 30%;
+    width: 100%;
+    font-size: 1.5em;
+}
+.ulNavBar li a{
+    color: white;
+    transition: all 0.2s ease;
+}
+.ulNavBar li a:hover{
+    text-shadow: 3px 3px rgb(78, 78, 78);
+    transform:translate(3px, 3px);
+}
+
+    /* MENU BURGER VISIBLE QU'EN MEDIA QUERIES */
+#menuBurger{
+    display: none;
+    width : 50px;
+    height: 50px;
+    margin-right: 5%;
+    background-color: black;
+    transition: all 0.2s ease;
+}
+    /* ICON DU MENU BURGER */
+.icon{
+    top: 50%;
+    right: 50px;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    position: absolute;
+}
+
+.icon::before, .icon::after, .icon div{
+  background: #fff;
+  content: "";
+  display: block;
+  height: 5px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: all 0.5s;
+}
+    /* ANIMATION SUR L'ICONE */
+#menuBurger:hover{
+    cursor: pointer;
+}
+.icon:hover::before {
+    transform: translateY(12px) rotate(135deg);
+  }
+.icon:hover::after {
+    transform: translateY(-12px) rotate(-135deg);
+  }
+.icon:hover div {
+    transform: scale(0);
+  }
+
+    /* DROP DOWN */
+#dropDown{
+    background-color: white;
+    color: black;
+    position: absolute;
+    box-shadow: 2px 2px 2px black;
+    right: 50px;
+    bottom: -100px;
+    animation-name : dropdown;
+    animation-duration : 0.5s;
+}
+
+@keyframes dropdown{
+    from{
+        filter: blur(10px);
+    }
+    to{
+       filter: blur(0);
+    }
+}
+
+#dropDown ul li{
+    padding: 10px;
+}
+
+#dropDown ul li a{
+    color: black;
+    transition: all 0.2s ease
+}
+
+#dropDown ul li a:hover{
+    text-shadow: 1px 1px grey;
+    transform:translate(1px, 1px);
+}
+
+    /* RESTE DE LA PAGE */
+#fillingText{
+    margin: 5% 20%;
+}
+
+#fillingText h2{
+    font-family:'Courier New', Courier, monospace;
+}
+
+    /* CLASS STICKY POUR LA STICKY NAV EN JS */
+.sticky{
+    position: fixed;
+    top: 0;
+}
+
+/* EXO ALERTS */
+#bigMain{
+    height: 1000px;
+}
+.red{
+    color: red;
+}
+.yellow{
+    color: yellow;
+}
+.green{
+    color:green;
+}
+
+/* CONVERTISSEUR DEVISES */
+#convertMain{
+    margin:5%;
+}
+#convertMain h1{
+    margin: 2%;
+}
+#convertMain fieldset{
+    margin: 0 auto;
+    padding: 2%;
+    position: relative;
+    border: 1px 1px solid purple;
+    box-shadow: 3px 3px purple;
+    width: 30%;
+    height: 20vh;
+}
+#convertMain form{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    margin: 0 auto;
+    width: 100%;
+}
+#convertMain form .convertLines{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#convertMain button{
+    position : absolute;
+    left: 45%;
+    bottom : 2px;
+}
+
+/* COMPTEUR DE MOTS */
+#wordCounterMain{
+    margin: 5%;
+}
+#wordCounterMain h1{
+    margin: 2%;
+}
+#wordCounterMain fieldset{
+    margin: 0 auto;
+    padding: 2%;
+    position: relative;
+    border: 1px 1px solid purple;
+    box-shadow: 3px 3px purple;
+    width: 30%;
+    height: 10vh;
+}
+#wordCounterMain textarea{
+    width:300px;
+    max-width: 350px;
+    max-height: 5vh;
+}
+#wordCounterMain form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    margin: 0 auto;
+    width: 100%;
+}
+.wordCounterLines{
+    display:flex;
+    flex-direction: column;
+}
+
+/* VOLVIC */
+#volvicBody{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#volvicBody h1{
+    font-family: archiDaughter;
+    color:white;
+    padding: 15%;
+    font-size:3em;
+}
+#volvicBody footer{
+    background-color: rgb(1, 184, 92);
+    color: white;
+    height: 10vh;
+}
+#volvicBody h2{
+    font-family: archiDaughter;
+    color:rgb(1, 184, 92);
+    font-size: 2em;
+}
+#volvicBody h3{
+    font-family: archiDaughter;
+    color:rgb(1, 184, 92);
+    font-size: 1.5em;
+}
+
+#volvicNavbar{
+    height:10vh;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(1, 184, 92);
+    color: white;
+    box-shadow : none;
+}
+#volvicNavbar #classicUl{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+}
+#volvicNavbar #classicUl li a{
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 5px;
+    transition: all 0.3s ease-in-out;
+}
+#volvicNavbar #classicUl li a:hover{
+    color: seagreen;
+}
+#volvicDropdown{
+    position:absolute;
+    right: 20px;
+    bottom: -180px;
+    width: 250px;
+    background-color: white;
+    color:rgb(1, 184, 92);
+    box-shadow: 1px 1px 3px black;
+    animation-name: showMenu;
+    animation-duration: 0.5s;
+}
+
+@keyframes showMenu{
+    from{
+        filter: blur(10px);
+    }
+    to{
+       filter: blur(0);
+       backdrop-filter: blur(5px);
+    }
+}
+#volvicDropdown #dropdownUl{
+    padding: 5%;
+}
+#volvicDropdown #dropdownUl li{
+    padding: 5%;
+}
+#volvicDropdown #dropdownUl li a{
+    color:seagreen;
+}
+#volvicHeaderBg{
+    background-image: url(../img/volcan.jpeg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#volvicLogo{
+    object-fit: cover;
+    width: 5%;
+    margin-left: 5%;
+    text-align:center;
+}
+#volvicProducts{
+    margin: 2%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#volvicProducts article{
+    border: 1px solid rgb(1, 184, 92);
+    padding: 5%;
+    width: 20%;
+    height: 500px;
+    transition: all 0.5s ease-in-out;
+}
+#volvicProducts article:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px seagreen;
+    transform: translate(-5px, -5px);
+}
+#volvicProducts img{
+    width: 100%;
+    margin-bottom: 5%;
+    object-fit: cover;
+}
+#menuBurgerIcon{
+    display: none;
+    position: absolute;
+    right: 5%;
+    padding: 1%;
+    margin-right: 5%;
+    font-size: 3em;
+    transition: all 0.5s ease-in-out;
+}
+#menuBurgerIcon:active{
+    box-shadow: 2px 2px seagreen;
+    transform: translate(-2px, -2px);
+}
+
+    /* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    #menuBurger{
+        display:inline;
+    }
+    #menuBurgerIcon{
+        display:inline;
+    }
+    .ulNavBar{
+        visibility: hidden;
+        display:none;
+    }
+    #classicUl{
+        visibility: hidden;
+        display:none;
+        flex-direction: column;
+    }
+    #volvicProducts{
+        flex-direction: column;
+    }
+    #volvicProducts article{
+        width: 75%;
+        height: 30%;
+        margin-bottom: 5%;
+    }
+    #volvicProducts article img{
+        width: 75%;
+    }
+    #volvicBody h1{
+        padding-top: 20%;
+        font-size:2.2em;
+    }
+}

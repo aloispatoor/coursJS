@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cours JS - Page de connection</title>
+</head>
+<body>
+    <main>
+        <section id="connexion">
+            <h1>se connecter</h1>
+            <form>
+                <div class="labelAndInput">
+                    <label for="mail">Adresse E-mail : </label>
+                    <input type="email" name="mail" id="mail" placeholder="Adresse e-mail" required>
+                </div>
+                <div class="labelAndInput">
+                    <label for="password">Mot de passe : </label>
+                    <input type="password" id="password" placeholder="Mot de passe" required>
+                </div>
+                <button type="button" onclick="connexion()">Se Connecter</button>
+            </form>
+            <p id="additionalText"> </p>
+        </section>
+    </main>
+    <script src="assets/js/connexion.js"></script>
+</body>
+</html>
